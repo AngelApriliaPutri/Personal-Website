@@ -1,0 +1,294 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding, 5rem);
+}
+
+.primary-navigation ul>li>a {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    padding: 10px 12px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    color: #000;
+    transition: all .3s ease;
+    line-height: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.title-heading {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    display: grid;
+    position: relative;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh;
+    place-items: center;
+    overflow: hidden;
+    animation: clip-hero-anim 1.25s cubic-bezier(0.29, 0.8, 0.8, 0.98);
+    will-change: clip-path;
+}
+
+.hero__bg,
+.hero__cnt {
+    align-self: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.hero__bg {
+    display: grid;
+    position: relative;
+    z-index: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    animation: fade-in 0.75s linear;
+    will-change: opacity;
+}
+
+.hero__bg::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: -10%;
+    right: -10%;
+    bottom: -10%;
+    left: -10%;
+    background: rgba(210, 246, 241, 0.4);
+    background-blend-mode: screen;
+}
+
+.hero__bg picture {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    animation: scaling-hero-anim 4s 0.25s cubic-bezier(0, 0.71, 0.4, 0.97) forwards;
+    will-change: transform;
+}
+
+.hero__bg img {
+    display: block;
+    object-fit: cover;
+    object-position: 77% 50%;
+    height: auto;
+    width: 100%;
+}
+
+.hero__cnt {
+    display: grid;
+    position: relative;
+    place-items: center;
+    z-index: 10;
+    color: #fff;
+    font-size: 2.5vw;
+    opacity: 0;
+    animation: fade-in 0.75s 1.5s linear forwards;
+}
+
+.hero__cnt img {
+    height: 18vw;
+}
+
+.hero__cnt h1 {
+    margin-bottom: 0;
+    color: #111111;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.hero__cnt h6 {
+    width: 60%;
+    color: #053663;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 32px;
+    text-align: center;
+    margin: 26px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaling-hero-anim {
+    from {
+        transform: scale(1.25);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes clip-hero-anim {
+    from {
+        clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+.ll {
+    width: 100%;
+    height: 900px;
+    background-color: #090;
+}
+
+.vv {
+    transition: all 0.3s ease;
+}
+
+.vv2 {
+    padding: 14px 0 !important;
+    transition: all 0.4s ease;
+}
+
+.nav-link.active {
+    color: #0DCAF0 !important;
+    background-color: transparent;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+a:link {
+    text-decoration: none
+}
+
+.btn-lg {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+::placeholder {
+    color: red;
+    font-size: 14px;
+}
+
+ul.dd a {
+    color: #222;
+}
+
+.icon-circle {
+    transition: all 0.3s ease;
+    width: 50px;
+    margin: 0 5px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.icon-circle:hover {
+    background-color: #0DCAF0;
+    box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.05);
+    border: #0DCAF0;
+}
+
+.icon-circle:hover i {
+    color: #fff;
+}
+
+.icon-circle a i {
+    color: #ccc;
+}
+
+.aa .icon-circle {
+    border: 1px solid #bbb;
+}
+
+.aa .icon-circle:hover {
+    border: #0DCAF0;
+}
+
+.owl-carousel .owl-item img {
+    display: inline-block !important;
+    width: auto;
+}
+
+.author-img {
+    width: 100%;
+    z-index: 99999999999;
+    position: absolute;
+    top: 0;
+}
+
+.info-item {
+    background-color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.info-item:hover {
+    background-color: #fff;
+    transform: rotate(2deg);
+}
+
+.author-img img {
+    width: 120px !important;
+    height: auto;
+    border-radius: 100%;
+}
+
+.testi-text {
+    font-size: 20px;
+    line-height: 38px;
+}
+
+.testi-heading {
+    font-weight: 700;
+}
+
+.hh {
+    letter-spacing: 5px;
+}
+
+
+.kk {
+    height: 500px;
+}
+
+.owl-carousel {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pp a {
+    position: relative;
+    top: 0;
+    transition: top ease 0.3s;
+}
+
+.pp a:hover {
+    top: -15px;
+}
+
+.card {
+    border: 0;
+}
